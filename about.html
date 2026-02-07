@@ -52,15 +52,75 @@
             </div>
             </div>
             <div class="box box-about-2">
-                 <img class="parallax-img" src="assets/images/IMG_001.png" alt="IMG1">
+                 <img class="parallax-img" data-offset="-40" data-intensity="120"src="assets/images/IMG_0001.png" alt="IMG1">
             </div>
             <div class="box box-about-3">
-                <img class="parallax-img" src="assets/images/IMG_003.png" alt="IMG2">
+                <img class="parallax-img" data-offset="-40" data-intensity="120" src="assets/images/IMG_0003.png" alt="IMG2">
             </div>
             <div class="box box-about-4">
-                <img class="parallax-img" src="assets/images/IMG_002.png" alt="IMG3">
+                <img class="parallax-img" data-offset="-40" data-intensity="120" src="assets/images/IMG_0002.png" alt="IMG3">
             </div>
         </div>
+
+<!-- <script>
+  const images = document.querySelectorAll('.parallax-img');
+
+  function parallax() {
+    const viewportHeight = window.innerHeight;
+
+    images.forEach(img => {
+      const parent = img.closest('.box');
+      const rect = parent.getBoundingClientRect();
+
+      if (rect.bottom > 0 && rect.top < viewportHeight) {
+        const scrollProgress =
+          (viewportHeight - rect.top) / (viewportHeight + rect.height);
+
+        const translateY = (scrollProgress - 0.75) * 200; // noticeable
+        img.style.transform = `translateY(${translateY}px)`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', parallax);
+  window.addEventListener('load', parallax);
+</script> -->
+
+<script>
+  const images = document.querySelectorAll('.parallax-img');
+
+  function parallax() {
+    const vh = window.innerHeight;
+
+    images.forEach(img => {
+      const box = img.closest('.box');
+      const rect = box.getBoundingClientRect();
+
+      if (rect.bottom > 0 && rect.top < vh) {
+        const progress =
+          (vh - rect.top) / (vh + rect.height);
+
+        const baseOffset = -30;   // keeps focal point safe
+        const intensity = 180;    // 👈 BIG boost
+
+        const translateY =
+          baseOffset + (progress - 0.5) * intensity;
+
+        img.style.transform = `translateY(${translateY}px)`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', parallax);
+  window.addEventListener('load', parallax);
+</script>
+
+
+  window.addEventListener('scroll', parallax);
+  window.addEventListener('load', parallax);
+</script>
+
+
     </section>
 
         <footer class="footer">

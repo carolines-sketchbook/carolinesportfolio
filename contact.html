@@ -37,6 +37,40 @@
         </div>
     </header>
 
+<div class = "contact-all-container">
+        <div class="contact-left">
+      <h1 class="contact-title">Contact Me</h1>
+      <p class="contact-subtitle">
+        Fill out your info and I’ll get back to you. Thanks!
+      </p>
+    </div>
+
+    <div class="contact-right">
+      <form class="contact-panel" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+
+        <div class="contact-row">
+          <div class="field">
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Enter name here" required>
+          </div>
+
+          <div class="field">
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Enter email here" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Message:</label>
+          <textarea name="message" required></textarea>
+        </div>
+
+        <button class="contact-btn" type="submit">Submit</button>
+      </form>
+    </div>
+    </div>
+
         <footer class="footer">
         <div class="footer__grid">
 
