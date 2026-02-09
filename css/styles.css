@@ -81,7 +81,7 @@ body {
 .home__container{
     margin-top: 2rem;
 }   
-.intro__title{
+.intro__title__index{
     color: #fff;
     font-size: clamp(1.5rem, 2.8vw, 9.5rem);
     font-weight: 700;
@@ -107,6 +107,12 @@ body {
           font-size: clamp(3rem, 3vw + 1.2rem, 4.5rem);
               /* font-size: 4.5rem; */
     font-weight: 700;
+}
+.intro__title__index{
+    color: #fff;
+    font-size: clamp(1.5rem, 2.8vw, 9.5rem);
+    font-weight: 700;
+    padding: 0 40px;
 }
 .intro__content__about p {
     margin-bottom: 1.5rem;
@@ -598,13 +604,7 @@ h1 {
     .nav__list{
     column-gap:2rem;
     }
-    .intro__title__index{
-    color: #fff;
-    font-size: clamp(1.18rem, 2.5vw, 9rem);
-    text-align: center;
-    font-weight: 700;
-    padding: 0 40px;
-    }
+
     .box{
         min-height: 355px;
         border-radius: 12px;
