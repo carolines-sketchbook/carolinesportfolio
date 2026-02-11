@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swain | Portfolio</title>
+    <title>Project 1</title>
     <link rel="stylesheet" href="css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-
+       
     <header class="header">
         <div class = "header__content">
             <a href="index.html" class="logo">
@@ -19,10 +19,10 @@
             </a>
              <nav class="nav">
              <ul class="nav__list">
-                <li class="nav__item nav__item__dropdown">
+                <li class="nav__item nav__item__dropdown nav__link--active">
                     <a href="index.html" class="nav__link nav__link--active">WORK</a>
                     <ul class="dropdown">
-                        <li><a href="project1.html">PROJECT ONE</a></li>
+                        <li><a href="project1.html" class="nav__link nav__link--active">PROJECT ONE</a></li>
                         <li><a href="project2.html">PROJECT TWO</a></li>
                         <li><a href="project3.html">PROJECT THREE</a></li>
                     </ul>
@@ -62,27 +62,58 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+    
+        <div class="grid-container-project">
 
-    <section clas ="home__container">
-        <div class="intro__content">
-            <h1 class="intro__title__index">I design scroll-stopping visuals that <br>
-                 make brands feel impossible to ignore.</h1>
+            <div class="box box-project-1">
+                <div class="intro__group">
+                    <h1 class="intro__project__title">Lorem ipsum dolor</h1>
+                    <div class="intro__project__paragraphs">
+                        <p class="intro__project__para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box box-project-2"></div>
+            <div class="box box-project-3"></div>
+            <div class="box box-project-4"></div>
+            <div class="box box-project-5"></div>
+            <div class="box box-project-6"></div>
+
+            <div class="box box-project-7">
+                <div class="challenge__group">
+                    <div class="challenge__header__group">
+                    <h2 class="challenge__title">Challenge</h2>
+                    <h3 class="challenge__subtitle">Lorem ipsum</h3>
+                    </div>
+                    <p class="challenge__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                        qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="box box-project-8">
+                <div class="solution__group">
+                    <div class="solution__header__group">
+                    <h2 class="solution__title">Solution</h2>
+                    <h3 class="solution__subtitle">Lorem ipsum</h3>
+                    </div>
+                    <p class="solution__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                        qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="grid-container">
-            <div class="box box-1"></div>
-            <div class="box box-2"></div>
-            <div class="box box-3"></div>
-            <div class="box box-4"></div>
-            <div class="box box-5"></div>
-            <div class="box box-6"></div>
-            <div class="box box-7"></div>
-        </div>
-    </section>
-
+        
     <div class="footer-divider"></div>
-
-    <footer class="footer">
+        <footer class="footer">
         <div class="footer__grid">
 
         <div class="footer__brand">
@@ -119,9 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
     </footer>
-
-
-
-
+    
 </body>
 </html>

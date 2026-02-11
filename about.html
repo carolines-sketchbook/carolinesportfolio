@@ -11,20 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-       
-    <header class="header">
+      <header class="header">
         <div class = "header__content">
             <a href="index.html" class="logo">
                 <img class="logo__image" src="assets/images/CarolineSwain.svg" alt="logo">
             </a>
-
              <nav class="nav">
              <ul class="nav__list">
-                 <li class ="nav__item">
-                    <a href="#" class="nav__link">WORK</a>
+                <li class="nav__item nav__item__dropdown">
+                    <a href="index.html" class="nav__link">WORK</a>
+                    <ul class="dropdown">
+                        <li><a href="project1.html">PROJECT ONE</a></li>
+                        <li><a href="project2.html">PROJECT TWO</a></li>
+                        <li><a href="project3.html">PROJECT THREE</a></li>
+                    </ul>
+                </li>
                  </li>
                     <li class ="nav__item">
-                    <a href="about.html" class="nav__link">ABOUT</a>
+                    <a href="about.html" class="nav__link nav__link--active">ABOUT</a>
                  </li>
                     <li class ="nav__item">
                     <a href="resume.html" class="nav__link">RESUME</a>
@@ -37,9 +41,30 @@
         </div>
     </header>
 
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownTrigger = document.querySelector(".nav__link--dropdown");
+  const dropdownParent = document.querySelector(".nav__item__dropdown");
+
+  dropdownTrigger.addEventListener("click", function (e) {
+    // Prevent page jump
+    e.preventDefault();
+
+    dropdownParent.classList.toggle("dropdown-open");
+  });
+
+  // Close if clicking outside
+  document.addEventListener("click", function (e) {
+    if (!dropdownParent.contains(e.target)) {
+      dropdownParent.classList.remove("dropdown-open");
+    }
+  });
+});
+</script>
+
         <div class="grid-container-about">
             <div class="box box-about-1">
-                <section class = "about__container">
+                <section class="about__container">
                     <div class="intro__content__about">
                         <h1 class="intro__title__about">Hi! I'm Caroline </h1>
                           <h2 class="intro_eyebrow__about">Welcome to my website!</h2>
@@ -49,10 +74,10 @@
                             surface-level and resonate visually, conceptually, and emotionally.</p>
                         <p class="para2">Beyond the screen, I spend my time figure drawing and saving inspiration
                             across TikTok and Pinterest (habits I swear keep my creative instincts sharp).</p>
-                            <p class="para3">I'm excited to connect with you and help bring your creative vision to life!
-                               Feel free to reach out to me at <a href="mailto:cjswain.design@gmail.com">cjswain.design@gmail.com</a>.</p>
-                            </div>
-                            </div>
+                        <p class="para3">I'm excited to connect with you and help bring your creative vision to life!
+                            Feel free to reach out to me at <a href="mailto:cjswain.design@gmail.com">cjswain.design@gmail.com</a>.</p>
+                      </div>
+                </div>
             </div>
             <div class="box box-about-2">
                  <img class="parallax-img" data-offset="-40" data-intensity="120"src="assets/images/IMG_0001.png" alt="IMG1">
@@ -64,30 +89,6 @@
                 <img class="parallax-img" data-offset="-40" data-intensity="120" src="assets/images/IMG_0002.png" alt="IMG3">
             </div>
         </div>
-
-<!-- <script>
-  const images = document.querySelectorAll('.parallax-img');
-
-  function parallax() {
-    const viewportHeight = window.innerHeight;
-
-    images.forEach(img => {
-      const parent = img.closest('.box');
-      const rect = parent.getBoundingClientRect();
-
-      if (rect.bottom > 0 && rect.top < viewportHeight) {
-        const scrollProgress =
-          (viewportHeight - rect.top) / (viewportHeight + rect.height);
-
-        const translateY = (scrollProgress - 0.75) * 200; // noticeable
-        img.style.transform = `translateY(${translateY}px)`;
-      }
-    });
-  }
-
-  window.addEventListener('scroll', parallax);
-  window.addEventListener('load', parallax);
-</script> -->
 
 <script>
   const images = document.querySelectorAll('.parallax-img');
@@ -117,15 +118,8 @@
   window.addEventListener('scroll', parallax);
   window.addEventListener('load', parallax);
 </script>
-
-
-  window.addEventListener('scroll', parallax);
-  window.addEventListener('load', parallax);
-</script>
-
-
-    </section>
-
+</section>
+    <div class="footer-divider"></div>
         <footer class="footer">
         <div class="footer__grid">
 

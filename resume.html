@@ -11,23 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-       
     <header class="header">
         <div class = "header__content">
             <a href="index.html" class="logo">
                 <img class="logo__image" src="assets/images/CarolineSwain.svg" alt="logo">
             </a>
-
              <nav class="nav">
              <ul class="nav__list">
-                 <li class ="nav__item">
-                    <a href="#" class="nav__link">WORK</a>
+                <li class="nav__item nav__item__dropdown">
+                    <a href="index.html" class="nav__link">WORK</a>
+                    <ul class="dropdown">
+                        <li><a href="project1.html">PROJECT ONE</a></li>
+                        <li><a href="project2.html">PROJECT TWO</a></li>
+                        <li><a href="project3.html">PROJECT THREE</a></li>
+                    </ul>
+                </li>
                  </li>
                     <li class ="nav__item">
                     <a href="about.html" class="nav__link">ABOUT</a>
                  </li>
                     <li class ="nav__item">
-                    <a href="resume.html" class="nav__link">RESUME</a>
+                    <a href="resume.html" class="nav__link nav__link--active">RESUME</a>
                  </li>
                     <li class ="nav__item">
                     <a href="contact.html" class="nav__link">CONTACT</a>
@@ -37,6 +41,26 @@
         </div>
     </header>
 
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownTrigger = document.querySelector(".nav__link--dropdown");
+  const dropdownParent = document.querySelector(".nav__item__dropdown");
+
+  dropdownTrigger.addEventListener("click", function (e) {
+    // Prevent page jump
+    e.preventDefault();
+
+    dropdownParent.classList.toggle("dropdown-open");
+  });
+
+  // Close if clicking outside
+  document.addEventListener("click", function (e) {
+    if (!dropdownParent.contains(e.target)) {
+      dropdownParent.classList.remove("dropdown-open");
+    }
+  });
+});
+</script>
 
   <div class="resume-layout-grid">
     <div class="resume-left">
@@ -54,10 +78,9 @@
         alt="Caroline Swain Resume"
       >
     </div>
-
-
   </div>
 
+    <div class="footer-divider"></div>
         <footer class="footer">
         <div class="footer__grid">
 
