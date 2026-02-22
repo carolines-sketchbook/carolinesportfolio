@@ -759,7 +759,6 @@ h1 {
         .box-project-7{
         grid-column: 1 / span 3; 
         grid-row: 12 / span 3;
-        padding-left: 
         }
         .box-project-8{
         grid-column: 4 / span 3; 
@@ -790,8 +789,6 @@ h1 {
     gap: 2rem;
     align-items: center;
     padding: 40px 40px;
-    
-    
 }
 .contact-grid-container {
     grid-template-columns: 1fr;
@@ -937,7 +934,6 @@ h1 {
         .box-project-7{
         grid-column: 1 / span 6; 
         grid-row: 7 / span 1;
-        padding-left: 
         }
         .box-project-8{
         grid-column: 1 / span 6; 
@@ -960,10 +956,16 @@ h1 {
         font-weight: 800;
         margin-bottom: 1.1rem;
     }
+    .footer__codedby {
+        font-size: 15px;
+        font-weight: 600;
+        color: #9c9c9c;
+        margin-top: 1.6rem;
+    }
     .footer__role, .footer__email {
         font-size: 15px;
         font-weight: 600;
-        color: #C9C9C9;
+        color: #ffffff;
         margin-bottom: 0.5rem;
     }
     .footer__email:hover {
