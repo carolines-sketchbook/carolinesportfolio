@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-    <section clas ="home__container">
+    <section class ="home__container">
         <div class="intro__content">
             <h1 class="intro__title__index">I design scroll-stopping visuals that <br>
                  make brands feel impossible to ignore.</h1>
@@ -71,15 +71,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="grid-container">
             <div class="box box-1"></div>
-            <div class="box box-2"></div>
-            <div class="box box-3"></div>
+
+            <div class="box box-2">
+            <img class="parallax-img" data-offset="-40" data-intensity="120" src="assets/images/indeximgs/lovet_thumbnail01.png" alt="Lovet Thumbnail 01">
+            </div>
+
+            <div class="box box-3">
+            <img class="parallax-img" data-offset="-40" data-intensity="120" src="assets/images/indeximgs/lovet_thumbnail02.png" alt="Lovet Thumbnail 02">
+
+            </div>
             <div class="box box-4"></div>
             <div class="box box-5"></div>
             <div class="box box-6"></div>
             <div class="box box-7"></div>
         </div>
     </section>
+<script>
+  const images = document.querySelectorAll('.parallax-img');
 
+  function parallax() {
+    const vh = window.innerHeight;
+
+    images.forEach(img => {
+      const box = img.closest('.box');
+      const rect = box.getBoundingClientRect();
+
+      if (rect.bottom > 0 && rect.top < vh) {
+        const progress =
+          (vh - rect.top) / (vh + rect.height);
+
+        const baseOffset = -30;   // keeps focal point safe
+        const intensity = 180;
+
+        const translateY =
+          baseOffset + (progress - 0.5) * intensity;
+
+        img.style.transform = `translateY(${translateY}px)`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', parallax);
+  window.addEventListener('load', parallax);
+</script>
     <div class="footer-divider"></div>
         <footer class="footer">
         <div class="footer__grid">
