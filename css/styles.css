@@ -1062,7 +1062,8 @@ h1 {
         grid-row: 8 / span 1;
         }
   }
-
+/* 
+  FOOTER */
     .footer-divider {
         height: .01rem;
         background-color: #555; 
@@ -1129,34 +1130,47 @@ h1 {
         .footer__grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: clamp(1.5rem, 4vw, 4rem);
+            gap: clamp(1rem, 4vw, 2rem);
         }
         .footer__nav-group {
             display: flex;
             gap: 100px;
             justify-self: end;
         }
+        
     }
 
     @media (max-width: 780px) {
         .footer__grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: clamp(1.5rem, 4vw, 4rem);
+            gap: clamp(1rem, 4vw, 2rem);
         }
         .headingfooterwork {
             padding-top:30px;
             
+        }
+         .footer__codedby {
+            font-size: .9rem;
+            font-weight: 600;
+            color: #9c9c9c;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
     }
 
     @media (max-width: 480px) {
         .footer__grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: clamp(1.5rem, 4vw, 4rem);
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
         }
-
+        .footer__codedby {
+            font-size: .9rem;
+            font-weight: 600;
+            color: #9c9c9c;
+            margin-top: 1rem;
+        }
         .footer__name {
             font-size: 1.1rem;
             font-weight: 800;
@@ -1204,12 +1218,13 @@ h1 {
     @media (max-width: 340px) {
         .footer__grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: clamp(1.5rem, 4vw, 4rem);
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
         }
         .footer {
             color: white;
             padding: 2rem;
         }
     }
+    
     
