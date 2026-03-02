@@ -1176,12 +1176,6 @@ h1 {
             font-weight: 800;
             margin-bottom: 1.1rem;
         }
-        .footer__codedby {
-            font-size: .9rem;
-            font-weight: 600;
-            color: #9c9c9c;
-            margin-top: 4.5rem;
-        }
         .footer__role, .footer__email {
             font-size: .9rem;
             font-weight: 600;
@@ -1225,10 +1219,7 @@ h1 {
             color: white;
             padding: 2rem;
         }
-                .footer__codedby {
-            font-size: .9rem;
-            font-weight: 600;
-            color: #9c9c9c;
+            .footer__codedby {
             margin-top: 1rem;
         }
     }
