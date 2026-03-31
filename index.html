@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swain | Portfolio</title>
+    <title>Caroline Swain | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +22,9 @@
                 <li class="nav__item nav__item__dropdown">
                     <a href="index.html" class="nav__link nav__link--active">WORK</a>
                     <ul class="dropdown">
-                        <li><a href="project1.html">PROJECT ONE</a></li>
-                        <li><a href="project2.html">PROJECT TWO</a></li>
-                        <li><a href="project3.html">PROJECT THREE</a></li>
+                        <li><a href="project1.html">IT'S THAT SIMPLE</a></li>
+                        <li><a href="project2.html">LOVET: VET CARE</a></li>
+                        <li><a href="project3.html">GELETKA+</a></li>
                     </ul>
                 </li>
                  </li>
@@ -70,50 +70,31 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="grid-container">
-            <div class="box box-1"></div>
+            <div class="box box-1">
+                <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/indeximgs/lovet_thumbnail01.png" alt="Lovet Thumbnail 01">
+            </div>
 
             <div class="box box-2">
-            <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/indeximgs/lovet_thumbnail01.png" alt="Lovet Thumbnail 01">
+                <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/indeximgs/lovet_thumbnail02.png" alt="Lovet Thumbnail 02">
+
             </div>
 
             <div class="box box-3">
-            <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/indeximgs/lovet_thumbnail02.png" alt="Lovet Thumbnail 02">
-
+          <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/indeximgs/Pasta_Bag_Design2.png" alt="Bag_Design_ITS">
             </div>
-            <div class="box box-4"></div>
+            <div class="box box-4">
+            <video class="parallax-img" data-offset="-20" data-intensity="120" autoplay muted loop playsinline>
+            <source src="assets/videos/Its_That_Simple_Social_Chicken_Alfredo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            </div>
+
             <div class="box box-5"></div>
             <div class="box box-6"></div>
             <div class="box box-7"></div>
         </div>
     </section>
-<script>
-  const images = document.querySelectorAll('.parallax-img');
 
-  function parallax() {
-    const vh = window.innerHeight;
-
-    images.forEach(img => {
-      const box = img.closest('.box');
-      const rect = box.getBoundingClientRect();
-
-      if (rect.bottom > 0 && rect.top < vh) {
-        const progress =
-          (vh - rect.top) / (vh + rect.height);
-
-        const baseOffset = -30;   // keeps focal point safe
-        const intensity = 160;
-
-        const translateY =
-          baseOffset + (progress - 0.5) * intensity;
-
-        img.style.transform = `translateY(${translateY}px)`;
-      }
-    });
-  }
-
-  window.addEventListener('scroll', parallax);
-  window.addEventListener('load', parallax);
-</script>
     <div class="footer-divider"></div>
         <footer class="footer">
         <div class="footer__grid">
@@ -154,7 +135,34 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
     </footer>
+<script>
+  const images = document.querySelectorAll('.parallax-img');
 
+  function parallax() {
+    const vh = window.innerHeight;
+
+    images.forEach(img => {
+      const box = img.closest('.box');
+      const rect = box.getBoundingClientRect();
+
+      if (rect.bottom > 0 && rect.top < vh) {
+        const progress =
+          (vh - rect.top) / (vh + rect.height);
+
+        const baseOffset = -30;   // keeps focal point safe
+        const intensity = 160;
+
+        const translateY =
+          baseOffset + (progress - 0.5) * intensity;
+
+        img.style.transform = `translateY(${translateY}px)`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', parallax);
+  window.addEventListener('load', parallax);
+</script>
 
 
 
