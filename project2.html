@@ -81,9 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="box box-project-3">
             <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/indeximgs/lovet_thumbnail02.png" alt="Lovet Thumbnail 02">
             </div>
-            <div class="box box-project-4"></div>
-            <div class="box box-project-5"></div>
-            <div class="box box-project-6"></div>
+            <div class="box box-project-4">
+            <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/Project2/Lovet_bookmark_01.png" alt="Lovet Phone thumbnail">
+            </div>
+            <div class="box box-project-5">
+            <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/Project2/Lovet_Phone_001.png" alt="Lovet Phone thumbnail">
+            </div>
+            <div class="box box-project-6">
+            <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/Project2/Lovet_Desktop_01.png" alt="Lovet Phone thumbnail">
+            </div>
 
             <div class="box box-project-7">
                 <div class="challenge__group">
@@ -147,6 +153,33 @@ Required deeper brand identification in a competitive space through more vibrant
         </div>
 
     </footer>
-    
+        <script>
+  const images = document.querySelectorAll('.parallax-img');
+
+  function parallax() {
+    const vh = window.innerHeight;
+
+    images.forEach(img => {
+      const box = img.closest('.box');
+      const rect = box.getBoundingClientRect();
+
+      if (rect.bottom > 0 && rect.top < vh) {
+        const progress =
+          (vh - rect.top) / (vh + rect.height);
+
+        const baseOffset = -30;   // keeps focal point safe
+        const intensity = 160;
+
+        const translateY =
+          baseOffset + (progress - 0.5) * intensity;
+
+        img.style.transform = `translateY(${translateY}px)`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', parallax);
+  window.addEventListener('load', parallax);
+</script>
 </body>
 </html>
