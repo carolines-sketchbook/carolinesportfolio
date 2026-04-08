@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
    
         <div class="grid-container-project">
-
             <div class="box box-project-1">
                 <div class="intro__group">
                     <h1 class="intro__project__title">Geletka+ Brand Refresh</h1>
@@ -76,11 +75,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
 
-            <div class="box box-project-2"></div>
-            <div class="box box-project-3"></div>
-            <div class="box box-project-4"></div>
-            <div class="box box-project-5"></div>
-            <div class="box box-project-6"></div>
+            <div class="box box-project-2">
+            <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/Project3/Storyboard_Animation_01.png" alt="Geletka_Thumbnail_01">
+            </div>
+            <div class="box box-project-3">
+            <video class="parallax-img" data-offset="-20" data-intensity="120" autoplay muted loop playsinline>
+            <source src="assets/videos/Geletka Social Announcement_21.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            </div>
+            <div class="box box-project-4">
+            <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/Project3/Geletka_Tote_04.png" alt="Geletka_Tote_01">
+            </div>
+            <div class="box box-project-5">
+            <img class="parallax-img" data-offset="-20" data-intensity="120" src="assets/images/Project3/Geletka_Mug_03.png" alt="Geletka_Mug_01">
+            </div>
+            <div class="box box-project-6">
+            <video class="parallax-img" data-offset="-20" data-intensity="120" autoplay muted loop playsinline>
+            <source src="assets/videos/MATDWT_Animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            </div>
 
             <div class="box box-project-7">
                 <div class="challenge__group">
@@ -150,6 +165,33 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
     </footer>
-    
+        <script>
+  const images = document.querySelectorAll('.parallax-img');
+
+  function parallax() {
+    const vh = window.innerHeight;
+
+    images.forEach(img => {
+      const box = img.closest('.box');
+      const rect = box.getBoundingClientRect();
+
+      if (rect.bottom > 0 && rect.top < vh) {
+        const progress =
+          (vh - rect.top) / (vh + rect.height);
+
+        const baseOffset = -30;   // keeps focal point safe
+        const intensity = 160;
+
+        const translateY =
+          baseOffset + (progress - 0.5) * intensity;
+
+        img.style.transform = `translateY(${translateY}px)`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', parallax);
+  window.addEventListener('load', parallax);
+</script>
 </body>
 </html>
